@@ -4,9 +4,9 @@ import java.awt.*;
 
 public class Ball extends Sprite {
     private final Color color = new Color (
-            (int)(Math.random() * 255),
-            (int)(Math.random() * 255),
-            (int)(Math.random() * 255)
+            (int)(Math.random() * (255 - 128 + 1) + 128),
+            (int)(Math.random() * (255 - 128 + 1) + 128),
+            (int)(Math.random() * (255 - 128 + 1) + 128)
     );
     private float vX = (float)(100f + (Math.random() * 200f));
     private float vY = (float)(100f + (Math.random() * 200f));
