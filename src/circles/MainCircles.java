@@ -55,4 +55,14 @@ public class MainCircles extends JFrame {
         }
         background.render(canvas);
     }
+        for (int i = 0; i < sprites.length; i++) {
+            sprites[i].update(canvas, deltaTime);
+        }
+    }
+
+    private void render(GameCanvas canvas, Graphics g) {
+        for (int i = 0; i < sprites.length; i++) {
+            sprites[i].render(canvas, g);
+        }
+    }
 }
