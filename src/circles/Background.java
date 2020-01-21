@@ -2,27 +2,22 @@ package circles;
 
 import java.awt.*;
 
-public class Background {
-    private Color backgroundColor;
-    Color[] colors = new Color[100];
-    {
-        for(int i = 0; i < colors.length; i++){
-            colors[i] = new Color (
-                    (int)(Math.random() * 128),
-                    (int)(Math.random() * 128),
-                    (int)(Math.random() * 128)
-            );
-        }
+public class Background implements GameObject {
+    private float time;
+    private static final float AMPLITUDE = 255f / 2f;
+    private Color color;
+
+    @Override
+    public void update(GameCanvas gameCanvas, float deltaTime) {
+        time += deltaTime;
+        int red = Math.round(AMPLITUDE + AMPLITUDE * (float) Math.sin(time * 2f));
+        int green = Math.round(AMPLITUDE + AMPLITUDE * (float) Math.sin(time * 3f));
+        int blue = Math.round(AMPLITUDE + AMPLITUDE * (float) Math.sin(time));
+        color = new Color(red, green, blue);
     }
-/*    Background(){
-        this.backgroundColor = colors[(int)(Math.random() * colors.length)];
-    }*/
-    void update(GameCanvas canvas, float deltaTime) {
-        if(deltaTime > 0.025){
-            this.backgroundColor = colors[(int)(Math.random() * colors.length)];
-        }
-    }
-    void render(GameCanvas canvas) {
-        canvas.setBackground(backgroundColor);
+
+    @Override
+    public void render(GameCanvas gameCanvas, Graphics g) {
+        gameCanvas.setBackground(color);
     }
 }

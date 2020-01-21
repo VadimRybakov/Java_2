@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class GameCanvas extends JPanel {
 
-    MainCircles gameController;
+    CanvasListener gameController;
     long lastFrameTime;
 
-    GameCanvas(MainCircles gameController) {
+    GameCanvas(CanvasListener gameController) {
         this.gameController = gameController;
         lastFrameTime = System.nanoTime();
     }

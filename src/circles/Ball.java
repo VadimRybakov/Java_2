@@ -15,9 +15,14 @@ public class Ball extends Sprite {
         halfHeight = 20 + (float)(Math.random() * 50f);
         halfWidth = halfHeight;
     }
+    Ball(int x, int y) {
+        this();
+        this.x = x;
+        this.y = y;
+    }
 
     @Override
-    void update(GameCanvas canvas, float deltaTime) {
+    public void update(GameCanvas canvas, float deltaTime) {
         x += vX * deltaTime;
         y += vY * deltaTime;
         if (getLeft() < canvas.getLeft()) {
@@ -39,7 +44,7 @@ public class Ball extends Sprite {
     }
 
     @Override
-    void render(GameCanvas canvas, Graphics g) {
+    public void render(GameCanvas canvas, Graphics g) {
         g.setColor(color);
         g.fillOval((int) getLeft(), (int) getTop(),
                 (int) getWidth(), (int) getHeight());
