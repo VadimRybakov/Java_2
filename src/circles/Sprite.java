@@ -3,6 +3,7 @@ package circles;
 import java.awt.*;
 
 public class Sprite implements GameObject {
+
     protected float x;
     protected float y;
     protected float halfWidth;
@@ -38,9 +39,9 @@ public class Sprite implements GameObject {
     protected float getHeight() {
         return 2f * halfHeight;
     }
+
     @Override
     public void update(GameCanvas canvas, float deltaTime) {}
     @Override
     public void render(GameCanvas canvas, Graphics g) {}
-
 }

@@ -61,7 +61,6 @@ public class MainCircles extends JFrame implements CanvasListener {
         gameObjects[gameObjectsCount++] = sprite;
     }
 
-    @Override
     public void onDrawFrame(GameCanvas canvas, Graphics g, float deltaTime) {
         update(canvas, deltaTime); // obnovlenie // S = v * t
         render(canvas, g); // otrisovka
@@ -79,4 +78,3 @@ public class MainCircles extends JFrame implements CanvasListener {
         }
     }
 
-}
