@@ -59,7 +59,7 @@ public class Solution {
     public static void main(String[] args) throws WrongArraySizeException {
         String str = "10 3 1 2\n2 3 2 2\n5 6 7 1\n300 3 1 0";
         String test1 = "10 3 1 2\n2 3 2 2\n5 6 7 1\n300 3 1 0\n300 3 1 0";
-        String test2 = "10 3 1 2\n2     3 2 2\n5 6 7 15 1\n300 3 1 0";
+        String test2 = "10 3 1 2\n2     3 2 2\n5 6 7     15 1\n300 3 1 0";
         String test3 = "10 3 1 2\n2 3 2 14\n5 6 7 1";
         String test4 = "10 3 1 2\n2 2 2\n5 6 7 1\n300 3 1 0";
         String test5 = "10 3 1 2\n2 3 2 2\n5 NN 7 1\n300 3 1 0";
