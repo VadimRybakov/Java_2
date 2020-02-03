@@ -1,5 +1,7 @@
 package Threads;
 
+import java.util.Arrays;
+
 public class ArrayComparison {
     static Object monitor = new Object();
     static final int size = 10000000;
@@ -45,7 +47,6 @@ public class ArrayComparison {
         System.arraycopy(a2, 0, arr, 0, h);
         System.out.println(System.currentTimeMillis() - a);
     }
-
     public static void main(String[] args){
         simpleFilling();
         try{
@@ -54,7 +55,7 @@ public class ArrayComparison {
         catch(InterruptedException e){
             e.printStackTrace();
         }
-        System.out.println(a1[0] + " " + a1[h-1] + " " + a1[h] + " " + a1[h+1] + " " + a1[size-1]);
-        System.out.println(arr[0] + " " + arr[h-1] + " " + arr[h] + " " + arr[h+1] + " " + arr[size-1]);
+        if(Arrays.equals(a1,arr)) System.out.println("true");
+        else System.out.println("false");
     }
 }
